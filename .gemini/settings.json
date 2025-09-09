@@ -6,7 +6,7 @@
     "theme": "Default"
   },
   "model": {
-    "name": "gemini-2.5-pro"
+    "name": "gemini-2.5-flash"
   },
   "context": {
     "fileName": ["GEMINI.md"]
@@ -18,21 +18,27 @@
         "run",
         "-i",
         "--rm",
-        "-e", "JIRA_URL",
-        "-e", "JIRA_USERNAME",
+        "-e", "JIRA_URL=https://celonis.atlassian.net",
+        "-e", "JIRA_USERNAME=a.garciafernandez@celonis.com",
         "-e", "JIRA_API_TOKEN",
         "ghcr.io/sooperset/mcp-atlassian:latest"
-      ],
-      "env": {
-        "JIRA_URL": "https://celonis.atlassian.net",
-        "JIRA_USERNAME": "a.garciafernandez@celonis.com",
-        "JIRA_API_TOKEN": ""
-      }
+      ]
     },
     "playwright": {
       "command": "npx",
       "args": [
         "@playwright/mcp@latest"
+      ]
+    },
+    "github": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "ghcr.io/github/github-mcp-server"
       ]
     }
   }

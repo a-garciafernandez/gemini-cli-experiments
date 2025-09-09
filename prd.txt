@@ -1,63 +1,38 @@
-Product Requirements Document: To-Do App
 
-1. Introduction
+**Product Requirements Document: Light/Dark Theme Customization**
 
-This document outlines the product requirements for a simple and intuitive To-Do List application. The goal is to create a tool that helps users organize their tasks, track their progress, and improve their productivity.
+**1. Overview**
 
-2. Objectives
+This document outlines the requirements for a new feature that allows users to customize the website's theme by choosing between a light and a dark mode. This feature will be accessible from the user's Edit Profile page.
 
-- To provide a user-friendly interface for managing tasks.
-- To allow users to easily add, edit, and delete tasks.
-- To enable users to mark tasks as complete and filter them.
-- To offer a clear overview of pending and completed tasks.
+**2. Feature Description**
 
-3. Features
+The goal of this feature is to enhance user experience by providing visual customization options. Users will be able to switch the website's appearance to their preferred mode, which can help reduce eye strain in different lighting conditions.
 
-3.1. Task Creation
-- Users should be able to create a new task with a title and an optional description.
-- Each new task should be added to the list of active tasks.
+**3. Location in the User Interface**
 
-3.2. Task Editing
-- Users should be able to edit the title and description of an existing task.
+The theme customization setting will be located in the "Edit Profile" page.
 
-3.3. Task Deletion
-- Users should be able to delete a task from their list.
+**4. Detailed Requirements**
 
-3.4. Task Completion
-- Users should be able to mark a task as "complete".
-- Completed tasks should be visually distinguished from active tasks (e.g., with a strikethrough).
+*   **Theme Section:** A new section titled "Theme" will be added to the "Edit Profile" page.
+*   **Theme Options:** Users will have the following options:
+    *   Light Theme (default)
+    *   Dark Theme
+*   **Selection Mechanism:** Users will be able to select their desired theme using a clear and intuitive UI element, such as a dropdown.
+*   **Instantaneous Change:** The theme change will be applied instantly across the entire website requiring a page refresh.
+*   **Persistence:** The user's selected theme will be saved to their profile and will persist across all their sessions, regardless of the device they are using.
+*   **Default Theme:** For all new users, the default theme will be the "Light" theme.
 
-3.5. Task List
-- The main view of the application should display the list of tasks.
-- Each task in the list should show its title and a checkbox to mark it as complete.
+**5. User Interface (UI) and User Experience (UX)**
 
-3.6. Filtering
-- Users should be able to filter the task list to show:
-  - All tasks
-  - Only active tasks
-  - Only completed tasks
+*   The UI for the theme selection should be simple and easy to understand.
+*   A visual indicator should clearly show which theme is currently active.
 
-4. User Stories
+**6. Acceptance Criteria**
 
-- As a busy professional, I want to quickly add tasks to my to-do list so I don't forget them.
-- As a student, I want to see all my pending assignments in one place so I can prioritize my work.
-- As a project manager, I want to mark tasks as complete so I can track the progress of my project.
-- As a user, I want to be able to delete tasks I no longer need to do.
-
-5. UI/UX Considerations
-
-- The design should be clean, simple, and intuitive.
-- The main focus should be on the task list.
-- Adding a new task should be a prominent and easily accessible action.
-- The application should be responsive and work well on different screen sizes (desktop and mobile).
-
-6. Technical Requirements
-
-- The application can be a web-based application, a native mobile app (iOS/Android), or a desktop application.
-- Data should be stored locally on the device or in the cloud to persist between sessions.
-
-7. Success Metrics
-
-- Number of daily active users.
-- Number of tasks created and completed per user.
-- User satisfaction ratings and reviews.
+*   A theme setting is present in the "Edit Profile" page.
+*   Users can select either "Light" or "Dark" theme.
+*   The website's theme changes immediately upon selection.
+*   The chosen theme is saved and remains active after the user logs out and logs back in.
+*   All pages and UI components of the website are correctly styled for both light and dark themes, ensuring readability and a consistent user experience.
