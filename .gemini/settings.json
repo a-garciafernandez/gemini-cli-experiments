@@ -1,0 +1,39 @@
+{
+  "general": {
+    "preferredEditor": "vscode"
+  },
+  "ui": {
+    "theme": "Default"
+  },
+  "model": {
+    "name": "gemini-2.5-pro"
+  },
+  "context": {
+    "fileName": ["GEMINI.md"]
+  },
+  "mcpServers": {
+      "mcp-atlassian": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e", "JIRA_URL",
+        "-e", "JIRA_USERNAME",
+        "-e", "JIRA_API_TOKEN",
+        "ghcr.io/sooperset/mcp-atlassian:latest"
+      ],
+      "env": {
+        "JIRA_URL": "https://celonis.atlassian.net",
+        "JIRA_USERNAME": "a.garciafernandez@celonis.com",
+        "JIRA_API_TOKEN": ""
+      }
+    },
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest"
+      ]
+    }
+  }
+}
