@@ -1,0 +1,25 @@
+{
+  "name": "gemini-cli-experiments",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/a-garciafernandez/gemini-cli-experiments#readme",
+  "bugs": {
+    "url": "https://github.com/a-garciafernandez/gemini-cli-experiments/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-garciafernandez/gemini-cli-experiments.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {},
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.3.1"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.2"
+  }
+}
