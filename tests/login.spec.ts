@@ -1,19 +1,10 @@
 import { test, expect } from '@playwright/test';
+import { LoginPage } from './pages/LoginPage';
 
 test('login with credentials', async ({ page }) => {
-  await page.goto('/');
-
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Celonis/);
-
-  // Login
-  await page.getByLabel('Email').fill(process.env.EMAIL!);
-  await page.getByLabel('Password').fill(process.env.PASSWORD!);
-  await page.getByRole('button', { name: 'Sign in' }).click();
-
-  // Wait for the main content to load
-  await page.locator('main').waitFor();
-
-  // Add an assertion to verify successful login, for example, by checking for a specific element on the dashboard
-  await expect(page.locator('main')).toBeVisible();
+  const loginPage = new LoginPage(page);
+  await loginPage.goto();
+  await loginPage.expectPageTitle();
+  await loginPage.login(process.env.EMAIL!, process.env.PASSWORD!);
+  await loginPage.expectToBeLoggedIn();
 });
