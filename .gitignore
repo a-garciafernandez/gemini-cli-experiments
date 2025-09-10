@@ -7,3 +7,6 @@ node_modules/
 /playwright-report/
 /playwright/.cache/
 /.playwright-mcp/
+
+# IDE
+.idea/

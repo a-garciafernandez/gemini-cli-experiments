@@ -19,7 +19,7 @@
         "-i",
         "--rm",
         "-e", "JIRA_URL=https://celonis.atlassian.net",
-        "-e", "JIRA_USERNAME=a.garciafernandez@celonis.com",
+        "-e", "JIRA_USERNAME=p.ajitkumar@celonis.com",
         "-e", "JIRA_API_TOKEN",
         "ghcr.io/sooperset/mcp-atlassian:latest"
       ]
